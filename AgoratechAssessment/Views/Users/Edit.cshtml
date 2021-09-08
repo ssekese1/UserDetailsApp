@@ -1,0 +1,94 @@
+﻿@model AgoratechAssessment.Models.Users
+
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<h1>Edit User</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="FirstName" class="control-label"></label>
+                        <input asp-for="FirstName" class="form-control" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Surname" class="control-label"></label>
+                        <input asp-for="Surname" class="form-control" />
+                        <span asp-validation-for="Surname" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="CellNumber" class="control-label"></label>
+                        <input asp-for="CellNumber" class="form-control" />
+                        <span asp-validation-for="CellNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="IdNumber" class="control-label"></label>
+                        <input asp-for="IdNumber" class="form-control" />
+                        <span asp-validation-for="IdNumber" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="HouseNumber" class="control-label"></label>
+                        <input asp-for="HouseNumber" class="form-control" />
+                        <span asp-validation-for="HouseNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="ComplexName" class="control-label"></label>
+                        <input asp-for="ComplexName" class="form-control" />
+                        <span asp-validation-for="ComplexName" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Address" class="control-label"></label>
+                        <input asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="PostalCode" class="control-label"></label>
+                        <input asp-for="PostalCode" class="form-control" />
+                        <span asp-validation-for="PostalCode" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+                <div>
+                    <a asp-action="Index" class="btn btn-secondary ml-1">Back to List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
